@@ -143,7 +143,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
             >
               <DotLottiePlayer
-                src="/Marketing analytics.lottie"
+                src="/marketing-analytics.lottie"
                 autoplay
                 loop
                 style={{ width: '100%', height: '100%' }}
