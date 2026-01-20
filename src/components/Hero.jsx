@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { DotLottiePlayer } from '@dotlottie/react-player'
 import '@dotlottie/react-player/dist/index.css'
+import marketingAnalyticsLottie from '../public/marketinganalytics.lottie'
 
 const Hero = () => {
   const containerVariants = {
@@ -143,7 +144,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
             >
               <DotLottiePlayer
-                src="/marketinganalytics.lottie"
+                src={marketingAnalyticsLottie}
                 autoplay
                 loop
                 style={{ width: '100%', height: '100%' }}
