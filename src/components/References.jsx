@@ -40,7 +40,7 @@ const References = () => {
           className="mx-auto max-w-4xl bg-gray-50 p-8 rounded-xl border border-gray-200"
         >
           <img 
-            src="/refs.png" 
+            src="public\refs.png" 
             alt="Références G3M" 
             className="mx-auto w-full object-contain" 
           />
