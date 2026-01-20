@@ -23,7 +23,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer">
-          <img src="/logo.png" alt="G3M Consulting" className="h-10" />
+          <img src="public\logo.png" alt="G3M Consulting" className="h-10" />
         </motion.div>
 
         <nav className="hidden md:flex gap-8 text-sm font-medium">
