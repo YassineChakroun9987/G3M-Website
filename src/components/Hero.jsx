@@ -132,7 +132,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT ANIMATION BOX */}
+          {/* RIGHT ANIMATIOBOX */}
           <motion.div
             className="hidden md:block relative h-96"
             initial={{ opacity: 0, scale: 0.9 }}
