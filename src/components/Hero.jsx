@@ -132,24 +132,38 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT ANIMATIOBOX */}
+          {/* RIGHT ANIMATION BOX */}
           <motion.div
-            className="hidden md:block relative h-96"
+            className="hidden md:block relative h-96 group"
+            style={{ perspective: '1200px' }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-g3mBlue/20 to-g3mGold/10 rounded-3xl shadow-2xl overflow-hidden"
-              whileHover={{ scale: 1.05 }}
-            >
-              <DotLottiePlayer
-                src="/marketinganalytics.lottie"
-                autoplay
-                loop
-                style={{ width: '100%', height: '100%' }}
-              />
-            </motion.div>
+            <div className="absolute inset-0 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              {/* Front: Lottie */}
+              <div className="absolute inset-0 rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-g3mBlue/20 to-g3mGold/10 [backface-visibility:hidden]">
+                <DotLottiePlayer
+                  src="/marketinganalytics.lottie"
+                  autoplay
+                  loop
+                  style={{ width: '100%', height: '100%' }}
+                />
+              </div>
+
+              {/* Back: Big logo + name */}
+              <div className="absolute inset-0 rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-g3mBlue to-blue-900 text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div className="h-full w-full flex flex-col items-center justify-center gap-6 p-10">
+                  <img src="/logo.png" alt="G3M Consulting" className="h-28 w-auto drop-shadow-xl" />
+                  <div className="text-center">
+                    <div className="text-3xl font-bold tracking-wide">G3M Consulting</div>
+                    <div className="mt-2 text-sm uppercase tracking-[0.3em] text-white/70">
+                      Actuariat • Conseil
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
